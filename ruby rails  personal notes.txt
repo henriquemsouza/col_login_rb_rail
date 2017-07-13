@@ -1,0 +1,60 @@
+=================================================
+gem install bundler
+=================================================
+-to install  rails
+gem install rails
+
+-create nem  project
+rails new colchonet
+
+-inside  the folder
+rails s 
+
+-home url
+http://localhost:3000/
+
+-quarto
+rails generate scaffold room title location description:text
+rake db:create
+rake db:migrate
+
+-for error  with rake
+gem install rake -v 11.2.2
+
+-cadastro
+rails generate model user full_name email password location bio:text
+rake db:migrate
+
+rails generate scaffold user full_name email password location bio:text
+
+rails c or console
+
+-create home page 
+rails generate controller  home  index
+ get 'home/index'
+
+ root 'home#index'
+app/views/home/index.html.erb
+
+-o faz com que a gem seja baixada e instalada em seu sistema 
+bundle
+
+
+168 interna.
+
+184  MailCatcher
+install
+gem install mailcatcher
+
+200 login
+
+undefined method `authenticate' for #<Class:0x9bc4eb8>
+gem install 'bcrypt-ruby'
+-in project
+gem install bcrypt
+
+-cannot load such file -- bcrypt
+
+
+
+223
