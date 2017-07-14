@@ -1,0 +1,65 @@
+<% if @user.errors.any? %>
+	<div id="error_explanation">
+		Há erros no formulário, por favor verifique.
+	</div>
+<% end %>
+
+<%= form_for @user do |f| %>
+	<p>
+		<%= f.label :full_name %>
+		<%= f.text_field :full_name %>
+		<% if @user.errors.has_key? :full_name %>
+			<div class="error_message">
+				<%= @user.errors[:full_name].first %>
+			</div>
+		<% end %>
+	</p>
+	<p>
+		<%= f.label :location %>
+		<%= f.text_field :location %>
+		<% if @user.errors.has_key? :full_name %>
+			<div class="error_message">
+				<%= @user.errors[:full_name].first %>
+			</div>
+		<% end %>
+	</p>
+	<p>
+		<%= f.label :email %>
+		<%= f.text_field :email %>
+		<% if @user.errors.has_key? :email %>
+			<div class="error_message">
+				<%= @user.errors[:email].first %>
+			</div>
+		<% end %>
+	</p>
+	<p>
+		<%= f.label :password %>
+		<%= f.password_field :password %>
+		<% if @user.errors.has_key? :password %>
+			<div class="error_message">
+				<%= @user.errors[:password].first %>
+			</div>
+		<% end %>
+	</p>
+	<p>
+		<%= f.label :password_confirmation %>
+		<%= f.password_field :password_confirmation %>
+		<% if @user.errors.has_key? :password_confirmation %>
+			<div class="error_message">
+				<%= @user.errors[:password_confirmation].first %>
+			</div>
+		<% end %>
+	</p>
+	<p>
+		<%= f.label :bio %>
+		<%= f.text_field :bio %>
+		<% if @user.errors.has_key? :bio %>
+			<div class="error_message">
+				<%= @user.errors[:bio].first %>
+			</div>
+		<% end %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end 	%>

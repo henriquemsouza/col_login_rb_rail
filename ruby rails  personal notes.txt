@@ -58,3 +58,34 @@ gem install bcrypt
 
 
 223
+
+https://github.com/josemalcher/SchoolOfNet-Iniciando-Com-Ruby-On-Rails
+https://github.com/vinibaggio/colcho.net
+-tha work COPY-+
+https://github.com/sullyvannunes/colcho_net
+-ok
+https://github.com/DanielMaeda/railsStudy
+
+
+
+heroku
+git init
+git add .
+git commit -m "my first commit"
+git push heroku master
+
+heroku create
+====================
+sql problem
+Add this to your Gemfile,
+
+group :production do
+  gem 'pg'
+end
+group :development, :test do
+  gem 'sqlite3'
+end
+
+git add Gemfile
+git commit -m "Removed sqlite3 from Gemfile"
+git push heroku master
